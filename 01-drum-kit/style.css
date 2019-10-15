@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient(to left , rgb(47, 194, 162), rgb(68, 149, 216));
+}
+.container-drums {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
