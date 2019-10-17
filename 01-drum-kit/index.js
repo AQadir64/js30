@@ -23,10 +23,27 @@ const tomRightAllAudio = document.querySelector("#Small-Rack-Tom-Audio");
 function addEvent(element, audio) {
   element.addEventListener("click", () => {
     audio.currentTime = 0;
- 
     audio.play();
+    element.classList.add("playing");
+    setTimeout(() => {
+      element.classList.remove("playing");
+    }, 0.05);
   });
 }
+
+window.addEventListener("keydown", e => {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  audio.currentTime = 0;
+  audio.play();
+  const drum = document.querySelector(`g[data-key="${e.keyCode}`);
+  const key = document.querySelector(`div[data-key="${e.keyCode}`);
+  drum.classList.add("playing");
+  key.classList.add("playing");
+  setTimeout(() => {
+    drum.classList.remove("playing");
+    key.classList.remove("playing");
+  }, 0.05);
+});
 
 // invoking of function
 
