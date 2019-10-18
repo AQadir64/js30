@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background: url("http://i.stack.imgur.com/vhoa0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clock {
+  border: 5px dotted whitesmoke;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 120px;
+  margin: auto;
+  box-shadow: 20px 20px 100px rgba(255, 255, 255, 0.219);
+}
+.clock_face {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-3px);
+}
+.hand {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 3px;
+  background-color: rgb(243, 239, 239);
+  transform-origin: 100%;
+  border-radius: 2px;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(.59,1.22,.5,2.04) 
+}
