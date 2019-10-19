@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --background_color: #269abc;
+  --box_size: 100px;
+  --blur: 500px;
+}
+body {
+  text-align: center;
+  color: black;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 100;
+  font-size: 50px;
+}
+.main {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background_color);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+  background-size: var(--box_size) var(--box_size),
+    var(--box_size) var(--box_size),
+    calc(var(--box_size) / 5) calc(var(--box_size) / 5),
+    calc(var(--box_size) / 5) calc(var(--box_size) / 5);
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  filter: blur(--blur);
+  justify-content: center;
+  align-content: center;
+}
+.controls {
+  margin-bottom: 50px;
+}
+input {
+  width: 100px;
+}
