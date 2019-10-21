@@ -8,7 +8,7 @@
 :root {
   --background_color: #269abc;
   --box_size: 100px;
-  --blur: 500px;
+  --line_color: black;
 }
 body {
   text-align: center;
@@ -23,12 +23,12 @@ body {
   height: 100vh;
   background-color: var(--background_color);
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5) 2px,
+    var(--line_color) 2px,
       transparent 2px
     ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 2px, transparent 2px),
-    linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+    linear-gradient(90deg, var(--line_color) 2px, transparent 2px),
+    linear-gradient(var(--line_color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line_color) 1px, transparent 1px);
   background-size: var(--box_size) var(--box_size),
     var(--box_size) var(--box_size),
     calc(var(--box_size) / 5) calc(var(--box_size) / 5),

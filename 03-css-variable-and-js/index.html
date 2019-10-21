@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Css variable and Js</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input
+          id="spacing"
+          type="range"
+          name="box_size"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+        <label for="line_base">Line Color</label>
+        <input id="line_base" type="color" name="line_color" value="#269ABC" />
+
+        <label for="bg_base">Base Color</label>
+        <input id="bg_base" type="color" name="background_color" value="#269ABC" />
+      </div>
+    </section>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
