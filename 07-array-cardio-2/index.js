@@ -17,7 +17,21 @@ const comments = [
 
 // Array.prototype.some() // is at least one person 19 or older?
 
+const someOlder19 = people.some(person => {
+  const date = new Date();
+  return date.getFullYear() - person.year > 19;
+});
+
+console.log(someOlder19);
+
 // Array.prototype.every() // is everyone 19 or older?
+
+const everyOlder19 = people.every(person => {
+  const date = new Date();
+  return date.getFullYear() - person.year > 19;
+});
+
+console.log(everyOlder19);
 
 // Array.prototype.find()
 
@@ -25,9 +39,19 @@ const comments = [
 
 // find the comment with the ID of 823423
 
+const id = comments.find(commit => (commit.id == 823423));
+
+console.log(id);
+
 // Array.prototype.findIndex()
 
 // Find the comment with this ID
 
 // delete the comment with the ID of 823423
 
+
+const index = comments.findIndex(commit => commit.id == 823423)
+
+comments.splice(index,1)
+
+console.table(comments)
