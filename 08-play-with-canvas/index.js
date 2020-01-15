@@ -25,8 +25,7 @@ function draw(e) {
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
-  lastX = e.offsetX;
-  lastY = e.offsetY;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
   hue++;
   if (hue >= 360) {
     hue = 0;
@@ -43,8 +42,7 @@ function draw(e) {
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mousedown", e => {
   isDrawing = true;
-  lastX = e.offsetX;
-  lastY = e.offsetY;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
